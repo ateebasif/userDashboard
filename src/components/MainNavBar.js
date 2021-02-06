@@ -128,25 +128,22 @@ export default function ClippedDrawer() {
           <Grid item xs={12} sm={12} md={12}>
             <OrdersInfo />
           </Grid>
-
-          <Box style={{ display: "flex", flexDirection: "row" }}>
-            <Grid item xs={12} sm={12} md={4} style={{ marginTop: "1rem" }}>
-              <ScaleGraph />
-              <Box style={{ marginTop: "1rem" }}>
-                <ScaleGraph />
-              </Box>
-            </Grid>
-
-            <Box style={{ marginLeft: "3rem", marginTop: "1rem" }}>
-              <Grid item xs={12} sm={12} md={2}>
-                <ProductCategory />
-              </Grid>
-            </Box>
+          <Grid item xs={12} sm={12} md={4} style={{ marginTop: "1rem" }}>
+            <ScaleGraph />
             <Box style={{ marginTop: "1rem" }}>
-              <Grid item xs={12} sm={12} md={4}>
-                <RecentOrders />
-              </Grid>
+              <ScaleGraph />
             </Box>
+          </Grid>
+          <Box style={{ marginLeft: "3rem", marginTop: "1rem" }}>
+            <Grid item xs={12} sm={12} md={5}>
+              <ProductCategory />
+            </Grid>
+          </Box>
+          {width <= 774 && <Grid item sm={12} md={2}></Grid>}
+          <Box style={{ marginTop: "1rem" }}>
+            <Grid item xs={12} sm={12} md={4}>
+              <RecentOrders />
+            </Grid>
           </Box>
         </Grid>
       </main>

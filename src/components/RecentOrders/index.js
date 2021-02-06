@@ -3,7 +3,18 @@ import OrdersList from "./OrdersList";
 import { Box, Card, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  root: { height: "30vw", width: "27vw", borderRadius: 10 },
+  root: {
+    height: "30vw",
+    width: "27vw",
+    borderRadius: 10,
+    [theme.breakpoints.down("md")]: {
+      // width: "30vw",
+      maxWidth: 900,
+      width: 420,
+      height: 500,
+      marginLeft: "-1rem",
+    },
+  },
   heading: {
     paddingLeft: theme.spacing(2),
   },

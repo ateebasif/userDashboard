@@ -8,7 +8,25 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     height: "18vw",
     width: "30vw",
+    maxWidth: "50vw",
+    [theme.breakpoints.down("md")]: {
+      // width: "30vw",
+      maxWidth: 900,
+      width: 420,
+      height: 300,
+    },
     borderRadius: 10,
+  },
+  graphBox: {
+    position: "relative",
+    height: "20vh",
+    width: "28vw",
+    [theme.breakpoints.down("md")]: {
+      // width: "30vw",
+      maxWidth: 900,
+      width: 370,
+      height: 200,
+    },
   },
 }));
 
@@ -45,6 +63,8 @@ export default function ScaleGraph() {
   };
 
   const options = {
+    // maintainAspectRatio: false,
+    responsive: true,
     maintainAspectRatio: false,
     legend: {
       display: false,
@@ -76,11 +96,14 @@ export default function ScaleGraph() {
           <h3>Scales</h3>
           <p style={{ marginTop: "-14px" }}>Scales</p>
         </Box>
-        <Box style={{ position: "relative", height: "20vh", width: "28vw" }}>
+        <Box
+          // style={{ position: "relative", height: "20vh", width: "28vw" }}
+          className={classes.graphBox}
+        >
           <Line
             data={data}
-            width={100}
-            height={50}
+            // width={100}
+            // height={50}
             //   options={{ maintainAspectRatio: false }}
             options={options}
           />

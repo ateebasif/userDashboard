@@ -6,10 +6,32 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "25vw",
     width: "20vw",
+    maxWidth: "30vw",
     borderRadius: 10,
+    [theme.breakpoints.down("md")]: {
+      // width: "30vw",
+      maxWidth: 900,
+      width: 420,
+      height: 300,
+      marginLeft: "-4rem",
+    },
   },
   heading: {
     paddingLeft: theme.spacing(2),
+  },
+
+  graphBox: {
+    position: "relative",
+    height: "20vh",
+    width: "28vw",
+    marginLeft: "-60px",
+
+    [theme.breakpoints.down("md")]: {
+      // width: "30vw",
+      maxWidth: 900,
+      width: 500,
+      height: 200,
+    },
   },
 }));
 
@@ -31,6 +53,8 @@ export default function ProductCategory() {
   };
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     legend: {
       display: true,
       position: "bottom",
@@ -48,12 +72,13 @@ export default function ProductCategory() {
           <h3>Product Categories</h3>
         </Box>
         <Box
-          style={{
-            position: "relative",
-            height: "20vh",
-            width: "28vw",
-            marginLeft: "-60px",
-          }}
+          className={classes.graphBox}
+          // style={{
+          //   position: "relative",
+          //   height: "20vh",
+          //   width: "28vw",
+          //   marginLeft: "-60px",
+          // }}
         >
           <Pie
             data={data}
