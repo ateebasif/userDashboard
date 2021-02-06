@@ -4,13 +4,10 @@ import { Box, Card, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // padding: theme.spacing(1),/
     paddingLeft: theme.spacing(2),
-    // display: "flex",
-    // flexDirection: "column",
-    // alignItems: "center",
     justifyContent: "space-between",
-    height: "20vw",
+    height: "18vw",
+    width: "30vw",
     borderRadius: 10,
   },
 }));
@@ -79,7 +76,7 @@ export default function ScaleGraph() {
           <h3>Scales</h3>
           <p style={{ marginTop: "-14px" }}>Scales</p>
         </Box>
-        <Box style={{ position: "relative", height: "20vh", width: "30vw" }}>
+        <Box style={{ position: "relative", height: "20vh", width: "28vw" }}>
           <Line
             data={data}
             width={100}

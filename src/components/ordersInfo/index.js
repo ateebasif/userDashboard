@@ -15,7 +15,7 @@ import {
 
 export default function index() {
   return (
-    <div style={{ marginTop: "15px", marginLeft: "15px", display: "flex" }}>
+    <div style={{ marginTop: "-6px", marginLeft: "15px", display: "flex" }}>
       <Box th={2} width="15%">
         <PendingOrders />
       </Box>

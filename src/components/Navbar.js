@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     justifyContent: "center",
     display: "flex",
+    paddingLeft: "15rem",
   },
   search: {
     position: "relative",
@@ -59,6 +60,8 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: "inherit",
+    border: "1px solid #e3e3e3",
+    borderRadius: 30,
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -85,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
   darkModeDiv: {
     borderRadius: 30,
-    border: "1px solid black",
+    border: "1px solid #e3e3e3",
     // padding: 5,
     paddingLeft: 25,
     paddingRight: 25,
@@ -183,7 +186,7 @@ export default function PrimarySearchAppBar() {
   // style={{ background: "white", color: "black" }}
   return (
     <div className={classes.grow}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{ background: "white", color: "black" }}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -218,7 +221,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <div className={classes.darkModeDiv}>
               <div style={{ margingBottom: 5 }}>
-                <p>Dark Mode</p>
+                <p style={{ marginTop: "10px" }}>Dark Mode</p>
               </div>
               <div style={{ paddingTop: 12, marginLeft: "10px" }}>
                 <Switch />
