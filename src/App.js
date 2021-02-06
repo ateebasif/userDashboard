@@ -3,6 +3,7 @@
 import Navbar from "./components/Navbar";
 import Drawer from "./components/Drawer";
 import OrdersInfo from "./components/ordersInfo/index";
+import ScaleGraph from "./components/ScalesGraph/index";
 import {
   Box,
   Grid,
@@ -14,7 +15,7 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ background: "#efefef" }}>
       <Grid container>
         <Grid item xs={12} sm={12}>
           <Navbar />
@@ -32,17 +33,19 @@ function App() {
           style={{ marginTop: "4rem", background: "#efefef" }}
         >
           <OrdersInfo />
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
-          <h1>something</h1>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          md={4}
+          style={{
+            marginTop: "1rem",
+            background: "#efefef",
+            marginLeft: "265px",
+          }}
+        >
+          <ScaleGraph />
         </Grid>
       </Grid>
     </div>
