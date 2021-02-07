@@ -5,7 +5,7 @@ import { Box, Card, Typography, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "30vw",
-    width: "27vw",
+    // width: "27vw",
     borderRadius: 10,
     [theme.breakpoints.down("md")]: {
       // width: "30vw",
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecentOrders() {
+export default function RecentOrders({ recentOrdersWidth }) {
   const classes = useStyles();
 
   const orders = [
@@ -32,7 +32,7 @@ export default function RecentOrders() {
 
   return (
     <div style={{ marginLeft: "1rem" }}>
-      <Card className={classes.root}>
+      <Card className={classes.root} style={recentOrdersWidth}>
         <Box className={classes.heading}>
           <h3>Recent Orders</h3>
         </Box>

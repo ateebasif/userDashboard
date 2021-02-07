@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Card, Typography, makeStyles } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/Inbox";
+import CommentIcon from "@material-ui/icons/Comment";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
@@ -10,6 +10,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     height: "14vw",
     borderRadius: 10,
+    [theme.breakpoints.down("md")]: {
+      marginTop: "10px",
+      marginBottom: "10px",
+      width: "30vw",
+      height: "30vw",
+      marginLeft: "-12px",
+    },
   },
 
   headingText: {
@@ -17,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const RefundRequest = () => {
+const NewComments = () => {
   const classes = useStyles();
 
   return (
@@ -44,24 +51,24 @@ const RefundRequest = () => {
         >
           <Box
             style={{
-              background: "#ffdbdb",
+              background: "#e3ffec",
               borderRadius: 50,
               height: 80,
               width: 80,
               textAlign: "center",
             }}
           >
-            <InboxIcon
-              style={{ color: "#df1b1b", fontSize: 50, marginTop: 16 }}
+            <CommentIcon
+              style={{ color: "#5eeb89", fontSize: 50, marginTop: 16 }}
             />
           </Box>
-          <p>Refund Requests</p>
+          <p>New Comments</p>
           <Typography
             variant="h3"
             color="textPrimary"
             style={{ marginTop: -10 }}
           >
-            02
+            04
           </Typography>
         </Box>
         {/* Body Box end */}
@@ -70,4 +77,4 @@ const RefundRequest = () => {
   );
 };
 
-export default RefundRequest;
+export default NewComments;

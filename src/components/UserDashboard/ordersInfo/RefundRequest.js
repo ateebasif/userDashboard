@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Card, Typography, makeStyles } from "@material-ui/core";
-import AccessTimeIcon from "@material-ui/icons/AccessTime";
+import InboxIcon from "@material-ui/icons/Inbox";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
@@ -10,6 +10,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     height: "14vw",
     borderRadius: 10,
+    [theme.breakpoints.down("md")]: {
+      marginTop: "10px",
+      marginBottom: "10px",
+      width: "30vw",
+      height: "30vw",
+      marginLeft: "-12px",
+    },
   },
 
   headingText: {
@@ -17,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PendingOrders = () => {
+const RefundRequest = () => {
   const classes = useStyles();
 
   return (
@@ -44,24 +51,24 @@ const PendingOrders = () => {
         >
           <Box
             style={{
-              background: "#fdffdb",
+              background: "#ffdbdb",
               borderRadius: 50,
               height: 80,
               width: 80,
               textAlign: "center",
             }}
           >
-            <AccessTimeIcon
-              style={{ color: "#dda217", fontSize: 50, marginTop: 16 }}
+            <InboxIcon
+              style={{ color: "#df1b1b", fontSize: 50, marginTop: 16 }}
             />
           </Box>
-          <p>Pending Orders</p>
+          <p>Refund Requests</p>
           <Typography
             variant="h3"
             color="textPrimary"
             style={{ marginTop: -10 }}
           >
-            04
+            02
           </Typography>
         </Box>
         {/* Body Box end */}
@@ -70,4 +77,4 @@ const PendingOrders = () => {
   );
 };
 
-export default PendingOrders;
+export default RefundRequest;

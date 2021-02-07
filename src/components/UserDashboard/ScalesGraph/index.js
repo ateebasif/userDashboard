@@ -24,13 +24,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       // width: "30vw",
       maxWidth: 900,
-      width: 370,
+      width: 400,
       height: 200,
     },
   },
 }));
 
-export default function ScaleGraph() {
+export default function ScaleGraph({ scaleGraphWidth }) {
   const classes = useStyles();
 
   const data = {
@@ -89,9 +89,10 @@ export default function ScaleGraph() {
       ],
     },
   };
+  const v = 420;
   return (
     <div>
-      <Card className={classes.root}>
+      <Card className={classes.root} style={scaleGraphWidth}>
         <Box>
           <h3>Scales</h3>
           <p style={{ marginTop: "-14px" }}>Scales</p>

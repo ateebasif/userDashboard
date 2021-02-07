@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Card, Typography, makeStyles } from "@material-ui/core";
-import CommentIcon from "@material-ui/icons/Comment";
+import DoneIcon from "@material-ui/icons/Done";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
@@ -10,6 +10,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     height: "14vw",
     borderRadius: 10,
+    [theme.breakpoints.down("md")]: {
+      marginTop: "10px",
+      marginBottom: "10px",
+      width: "30vw",
+      height: "30vw",
+      marginLeft: "-12px",
+    },
   },
 
   headingText: {
@@ -17,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NewComments = () => {
+const CompletedOrders = () => {
   const classes = useStyles();
 
   return (
@@ -44,19 +51,25 @@ const NewComments = () => {
         >
           <Box
             style={{
-              //   background: "#e3ffec",
+              background: "#dbfff2",
               borderRadius: 50,
               height: 80,
               width: 80,
               textAlign: "center",
             }}
-          ></Box>
-          <p></p>
+          >
+            <DoneIcon
+              style={{ color: "#76c6a0", fontSize: 50, marginTop: 16 }}
+            />
+          </Box>
+          <p>Completed Orders</p>
           <Typography
             variant="h3"
             color="textPrimary"
             style={{ marginTop: -10 }}
-          ></Typography>
+          >
+            10
+          </Typography>
         </Box>
         {/* Body Box end */}
       </Card>
@@ -64,4 +77,4 @@ const NewComments = () => {
   );
 };
 
-export default NewComments;
+export default CompletedOrders;

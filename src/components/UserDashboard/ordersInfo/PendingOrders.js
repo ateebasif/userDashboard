@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Card, Typography, makeStyles } from "@material-ui/core";
-import CommentIcon from "@material-ui/icons/Comment";
+import AccessTimeIcon from "@material-ui/icons/AccessTime";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
@@ -10,6 +10,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     height: "14vw",
     borderRadius: 10,
+    [theme.breakpoints.down("md")]: {
+      // marginTop: "10px",
+      marginBottom: "10px",
+      width: "30vw",
+      height: "30vw",
+    },
   },
 
   headingText: {
@@ -17,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NewComments = () => {
+const PendingOrders = () => {
   const classes = useStyles();
 
   return (
@@ -44,18 +50,18 @@ const NewComments = () => {
         >
           <Box
             style={{
-              background: "#e3ffec",
+              background: "#fdffdb",
               borderRadius: 50,
               height: 80,
               width: 80,
               textAlign: "center",
             }}
           >
-            <CommentIcon
-              style={{ color: "#5eeb89", fontSize: 50, marginTop: 16 }}
+            <AccessTimeIcon
+              style={{ color: "#dda217", fontSize: 50, marginTop: 16 }}
             />
           </Box>
-          <p>New Comments</p>
+          <p>Pending Orders</p>
           <Typography
             variant="h3"
             color="textPrimary"
@@ -70,4 +76,4 @@ const NewComments = () => {
   );
 };
 
-export default NewComments;
+export default PendingOrders;

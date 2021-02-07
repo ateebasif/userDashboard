@@ -13,9 +13,22 @@ import {
   Button,
 } from "@material-ui/core";
 
-export default function index() {
+const useStyles = makeStyles((theme) => ({
+  mainDiv: {
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+  },
+}));
+
+export default function OrdersInfoindex() {
+  const classes = useStyles();
+
   return (
-    <div style={{ marginTop: "-6px", marginLeft: "15px", display: "flex" }}>
+    <div
+      style={{ marginTop: "4rem", display: "flex" }}
+      className={classes.mainDiv}
+    >
       <Box th={2} width="15%">
         <PendingOrders />
       </Box>

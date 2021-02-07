@@ -5,13 +5,13 @@ import { Box, Card, Typography, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "25vw",
-    width: "20vw",
-    maxWidth: "30vw",
+    // width: "20vw",
+    maxWidth: "40vw",
     borderRadius: 10,
     [theme.breakpoints.down("md")]: {
-      // width: "30vw",
+      // width: "76vw",
       maxWidth: 900,
-      width: 420,
+      // width: 620,
       height: 300,
       marginLeft: "-4rem",
     },
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ProductCategory() {
+export default function ProductCategory({ productCategoryWidth }) {
   const classes = useStyles();
 
   const data = {
@@ -67,7 +67,7 @@ export default function ProductCategory() {
 
   return (
     <div style={{ marginLeft: "1rem" }}>
-      <Card className={classes.root}>
+      <Card className={classes.root} style={productCategoryWidth}>
         <Box className={classes.heading}>
           <h3>Product Categories</h3>
         </Box>
